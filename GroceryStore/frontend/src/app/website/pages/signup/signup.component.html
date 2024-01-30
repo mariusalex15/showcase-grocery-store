@@ -1,0 +1,88 @@
+<section class="bg-profile">
+
+    <div class="loginContainer  d-flex justify-content-center align-items-center">
+      <div class="bgImagewrapper">
+        <img src="assets/img/banner/vegBackGround.png" class="bgImage" alt=""> 
+      </div>
+      <!-- formWrapper -->
+     
+        <div class="formWrapper">
+          <div class="wrapper">
+            <div class="title">Registration Form</div>
+            <form [formGroup]="signupForm" (ngSubmit)="signup()" action="#">
+              <div class="row">
+                <div class="mt-4 col-md-6">
+                  <input
+                    class="form-control"
+                    formControlName="firstName"
+                    type="text"
+                    required
+                    placeholder="First Name"
+                  />
+                  <!-- <label>First Name</label> -->
+                </div>
+
+                <div class="mt-4 col-md-6">
+                  <input
+                    class="form-control"
+                    formControlName="lastName"
+                    type="text"
+                    required
+                    placeholder="Last Name"
+                  />
+                  <!-- <label>Last Name</label> -->
+                </div>
+                <div class="mt-4 col-md-6">
+                  <input
+                    class="form-control"
+                    formControlName="phone"
+                    type="text"
+                    required
+                    placeholder="Phone No"
+                  />
+                  <!-- <label>Phone No</label> -->
+                </div>
+                <div class="mt-4 col-md-6">
+                  <input
+                    class="form-control"
+                    formControlName="password"
+                    type="password"
+                    required
+                    placeholder="Password"
+                  />
+                  <!-- <label>Password</label> -->
+                </div>
+                <div class="mt-4 col-md-12">
+                  <input
+                    class="form-control"
+                    formControlName="email"
+                    type="text"
+                    required
+                    placeholder="Email Address"
+                  />
+                  <!-- <label>Email Address</label> -->
+                </div>
+
+                <div>
+                  <button
+                    class="btn btn-success w-100 mt-4"
+                    style="background-color: #096a2e !important; opacity: 1"
+                    [disabled]="!signupForm.valid"
+                    type="submit"
+                  >
+                    Sign Up
+                  </button>
+                </div>
+                <div class="signup-link">
+                  Already have an account. <a routerLink="/login">Login</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+      </div>
+    
+    <!--  -->
+  </section>
+

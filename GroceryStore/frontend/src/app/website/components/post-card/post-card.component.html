@@ -1,0 +1,14 @@
+<div class="blog__item">
+  <div class="blog__item__pic">
+    <img src="assets/img/blog/{{data.image}}" alt={{data.title}}>
+  </div>
+  <div class="blog__item__text">
+    <ul>
+      <li><i class="fa fa-calendar-o"></i> {{data.date}}</li>
+      <li><i class="fa fa-comment-o"></i> {{data.comments}}</li>
+    </ul>
+    <h5><a routerLink="/blog/{{data.id}}">{{data.title}}</a></h5>
+    <p>{{data.description}} </p>
+    <a routerLink="/blog/{{data.id}}" class="blog__btn">READ MORE <span class="arrow_right"></span></a>
+  </div>
+</div>

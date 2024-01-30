@@ -1,0 +1,208 @@
+<app-header></app-header>
+<section class="bannerContainer py-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 d-flex align-items-center justify-content-center">
+        <div class="hero__text">
+          <span>Organic and Fresh</span>
+          <h2 class="text">Vegetable</h2>
+            <p class="text">
+                Welcome to our nature portal, where freshness meets flavor! <br />
+                Experience the crisp, vibrant goodness of vegetables freshly picked from our fields. <br />
+                Indulge in our selection of organic produce, nurtured with care and harvested with love. <br />
+                Each bite is a journey to nature's purest offerings — healthy, wholesome, and simply delightful. <br />
+                Join us in savoring the real taste of nature, right at your doorstep.
+            </p>
+          <a
+            (click)="route()"
+            class="btn"
+            style="
+              background-color: #7fad39 !important;
+              color: white !important;
+            "
+            >SHOP NOW</a
+          >
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <img class="banner-img" src="assets/img/banner/vegBanner.png" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 
+<section class="categories">
+  <div class="container">
+    <div class="row">
+      <div class="categories__slider owl-carousel">
+        <div class="col-lg-12">
+          <div
+            class="categories__item set-bg"
+            data-setbg="../../../../assets/img/categories/cat-1.jpg"
+          >
+            <h5><a href="#">Fresh Fruit</a></h5>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div
+            class="categories__item set-bg"
+            data-setbg="../../../../assets/img/categories/cat-2.jpg"
+          >
+            <h5><a href="#">Dried Fruit</a></h5>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div
+            class="categories__item set-bg"
+            data-setbg="../../../../assets/img/categories/cat-3.jpg"
+          >
+            <h5><a href="#">Vegetables</a></h5>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div
+            class="categories__item set-bg"
+            data-setbg="../../../../assets/img/categories/cat-4.jpg"
+          >
+            <h5><a href="#">drink fruits</a></h5>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div
+            class="categories__item set-bg"
+            data-setbg="../../../../assets/img/categories/cat-5.jpg"
+          >
+            <h5><a href="#">Fresh meat</a></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>  -->
+
+<section class="featured spad">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title">
+          <h2>Featured Product</h2>
+        </div>
+      </div>
+    </div>
+    <section>
+      <div class="container mb-5 w-75">
+        <!-- <form [formGroup]="filterForm" (ngSubmit)="submit()">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-lg-5 d-flex align-items-center justify-content-end">
+              <input
+                type="text"
+                placeholder="Filter by Title"
+                formControlName="title"
+                class="inputFields"
+              />
+            </div>
+            <div class="col-lg-4">
+              <input
+                type="number"
+                placeholder="Filter by Price"
+                formControlName="price"
+                class="inputFields"
+              />
+            </div>
+            <div class="col-lg-3">
+              <button class="btn btnSearch btnShopNow" type="submit">
+                Search
+              </button>
+            </div>
+          </div>
+        </form> -->
+        <form [formGroup]="filterForm" (ngSubmit)="submit()">
+          <div class="row">
+            <div class="col-md-4 mt-1">
+              <input
+                type="text"
+                placeholder="Filter by Title"
+                formControlName="title"
+                class="inputFields w-100"
+              />
+            </div>
+            <div class="col-md-4 mt-1">
+              <input
+                type="number"
+                placeholder="Filter by Price"
+                formControlName="price"
+                class="inputFields w-100"
+              />
+            </div>
+            <div class="col-md-4 d-flex justify-content-center">
+              <button class="btn btnSearch btnShopNow w-75 mt-1" type="submit">
+                Search
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- <div
+      class="row featured__filter d-flex justify-content-center align-items-center"
+    >
+      <ng-container *ngFor="let product of products">
+        <div
+          class="card mx-2 my-2 container-fluid border-1-solid"
+          style="width: 16rem"
+        >
+          <img [src]="product.thumbnail" class="card-img-top" alt="..." />
+          <div class="card-body text-center">
+            <div class="productTitle">{{ product.title }}</div>
+            <div class="row d-flex justify-content-center pt-2">
+              <div class="col-sm-6 text-end productQuantity">1Kg</div>
+              <div class="col-sm-6 text-start">{{ product.price + "$" }}</div>
+            </div>
+            <div class="row">
+              <div
+                class="col-12 d-flex justify-content-center align-items-center pt-3"
+              >
+                <button class="btn btnShopNow" (click)="route()">
+                  Shop Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div> -->
+    <div class="row">
+      <ng-container *ngFor="let product of products">
+        <div class="col-md-3">
+          <div
+            class="card my-2 border-1-solid"
+            style="border-color: #7fad39 !important"
+          >
+            <img [src]="product.thumbnail" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <div class="row d-flex justify-content-center">
+                <div class="productTitle col-sm-6 text-start">
+                  {{ product.title }}
+                </div>
+                <!-- <div class="col-sm-6 text-end productQuantity">1Kg</div> -->
+                <div class="col-sm-6 text-end">
+                  {{ product.price + "$ per Kg" }}
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 d-flex flex-row justify-content-center">
+                  <button class="btn btnShopNow btn-sm w-50" (click)="route()">
+                    Shop Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

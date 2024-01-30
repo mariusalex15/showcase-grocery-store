@@ -1,0 +1,26 @@
+.aboutUsWrapper{
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.sectionPara{
+    width: 70%;
+    text-align: center;
+}
+.para{
+    color: rgba(235, 253, 235, 0.75);
+    font-size: medium;
+    font-weight: 600;
+    
+}
+
+.aboutUsWrapper {
+    background-image: url('https://cdn.adh.reperio.news/image-3/39417a80-a20a-4859-ba54-cd4a5c60444c/index.jpeg?p=a%3D1%26co%3D1.05%26w%3D700%26h%3D750%26r%3Dcontain%26f%3Dwebp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+

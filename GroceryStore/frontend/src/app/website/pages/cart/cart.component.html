@@ -1,0 +1,110 @@
+<app-header></app-header>
+<div class="container" style="height: 65vh; overflow: auto">
+  <div class="row">
+    <div class="col d-flex flex-row justify-content-center">
+      <div class="section-title pt-4">
+        <h2>Cart</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="mb-2 w-100" style="border-collapse: separate">
+        <thead>
+          <tr style="border-bottom: 2px solid #096a2e !important">
+            <th>
+              <p>Products</p>
+            </th>
+            <th>
+              <p>Quantity</p>
+            </th>
+            <th>
+              <p>Price</p>
+            </th>
+            <th>
+              <p>Total Price</p>
+            </th>
+            <th>
+              <p>Action</p>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let item of cart">
+            <td>
+              <p>{{ item.title }}</p>
+            </td>
+            <td>
+              <p>{{ item.quantity }}</p>
+            </td>
+            <td>
+              <p>{{ item.price }}</p>
+            </td>
+            <td>
+              <p>{{ item.totalPrice }}</p>
+            </td>
+            <td>
+              <button
+                class="btn btn-danger btn-sm"
+                (click)="removeFromCart(item)"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>T: Quantity</p>
+            </td>
+            <td>
+              <p>
+                {{ totalQuantity }}
+              </p>
+            </td>
+            <td>
+              <p>T: Price</p>
+            </td>
+            <td>
+              <p>
+                {{ totalPrice }}
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="row">
+        <div class="col-6"></div>
+        <div class="col-6">
+          <button
+            class="btn btn-sm float-end"
+            style="
+              border-color: #7fad39;
+              color: #7fad39;
+              font-weight: 600;
+              border: 1.5px solid #7fad39;
+            "
+            (click)="checkout()"
+          >
+            Order
+          </button>
+          <button
+            class="btn btn-sm mx-1 float-end"
+            style="
+              border-color: #7fad39;
+              color: #7fad39;
+              font-weight: 600;
+              border: 1.5px solid #7fad39;
+            "
+            (click)="clearCart()"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

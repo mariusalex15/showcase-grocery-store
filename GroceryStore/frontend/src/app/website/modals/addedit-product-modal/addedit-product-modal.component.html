@@ -1,0 +1,27 @@
+<div class="container">
+  <form action="" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <input type="file" formControlName="thumbnail" />
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <input type="text" formControlName="title" />
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <input type="number" formControlName="price" />
+          </div>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-primary" type="reset">Clear</button>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-primary" type="submit">Save</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

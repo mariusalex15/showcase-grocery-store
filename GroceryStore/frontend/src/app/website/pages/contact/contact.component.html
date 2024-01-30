@@ -1,0 +1,73 @@
+<!-- <app-breadcrumb [title]="'Contact'"></app-breadcrumb> -->
+<app-header></app-header>
+
+<div class="contact-form">
+  <div class="container">
+    <div class="section-title">
+      <h2>Contact Us</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-12"></div>
+    </div>
+    <form [formGroup]="contactform" (ngSubmit)="submitForm()">
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <input type="text" placeholder="Your name" formControlName="name" />
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <input type="text" placeholder="Your Email" formControlName="email" />
+        </div>
+        <div class="col-lg-12 text-center">
+          <textarea
+            placeholder="Your message"
+            formControlName="message"
+          ></textarea>
+          <button
+            type="submit"
+            class="site-btn"
+            [disabled]="!contactform.valid"
+          >
+            SEND MESSAGE
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- map -->
+    <div class="map pt-4">
+      <iframe
+        src="https://www.google.com/maps/place/B%C4%83leni-S%C3%A2rbi+137011,+Rom%C3%A2nia/@44.81855,25.6315541,15z/data=!3m1!4b1!4m6!3m5!1s0x40b25d0911849bc7:0x46cfabe83d4d9fc1!8m2!3d44.8195838!4d25.6445801!16s%2Fg%2F1221sh3t?entry=ttu"
+        height="500"
+        style="border: 0"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
+      ></iframe>
+      <div class="map-inside">
+        <i class="icon_pin"></i>
+        <div class="inside-widget">
+          <h4>Baleni</h4>
+          <ul>
+            <li>Phone: +407215222</li>
+            <li>Add: Baleni, Dambovita, Romania</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+
+    <section class="contact spad">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-lg-3 col-md-3 col-sm-6 text-center"
+            *ngFor="let data of contactWidgets"
+          >
+            <app-contact-widget [data]="data"></app-contact-widget>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<app-footer></app-footer>

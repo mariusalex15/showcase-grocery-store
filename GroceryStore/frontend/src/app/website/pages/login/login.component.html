@@ -1,0 +1,36 @@
+<section>
+
+  <div class="loginContainer d-flex justify-content-center align-items-center">
+    <div class="bgImagewrapper">
+      <img src="assets/img/banner/vegBackGround.png" class="bgImage" alt=""> 
+    </div>
+<!-- formWrapper -->
+<div class="formWrapper">
+   <div class="wrapper">
+    <div class="title">Login Form</div>
+    <form [formGroup]="signinForm" (ngSubmit)="signin()" action="#">
+      <div class="field">
+        <input formControlName="email" type="text" required />
+        <label>Email Address</label>
+      </div>
+      <div class="field">
+        <input formControlName="password" type="password" required />
+        <label>Password</label>
+      </div>
+      <div class="field">
+        <input
+          [disabled]="!signinForm.valid"
+          type="submit"
+          value="Login"
+        />
+      </div>
+      <div class="signup-link">
+        Not a member? <a routerLink="/signup">Signup now</a>
+      </div>
+    </form>
+  </div>
+<!-- FormWrapperEnds -->
+</div> 
+</div>
+  
+</section>

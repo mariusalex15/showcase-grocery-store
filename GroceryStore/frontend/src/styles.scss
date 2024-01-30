@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+a{
+  text-decoration: none;
+}
+
+.bg-profile{
+  background-image:url('./assets/img/profiles/bg-img.jpg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .swal2-default-outline:focus{
+    box-shadow: none !important;
+  }}
+
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-control:focus{
+  border-color: #7fad39 !important;
+  box-shadow: inherit
+}
+
+.btn:focus{
+  box-shadow: inherit;
+}
+.swal2-default-outline:focus{
+  box-shadow: none  !important ;
+}

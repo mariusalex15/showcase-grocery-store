@@ -1,0 +1,32 @@
+
+
+.signUpLogin{
+background-color: #7fad39;
+color: white !important;
+font-weight: 700;
+border-radius: 5px;
+}
+// }
+
+// .navbarBtn{
+//     background-color: #7fad39 !important;
+//     border: none;
+//     margin-top: 4px
+// }
+
+// .navLi{
+//     font-size:15px
+// }
+
+
+@media (max-width: 982px) {
+    .navbar-nav {
+      margin-left: 20px !important;
+    }
+  }
+
+
+  .active{
+    color: #7fad39 !important;
+    font-weight: bold !important;
+  }
